@@ -15,6 +15,7 @@ virtualenv -p python3 venv
 
 ### Dependency 
 > python-dotenv [doc](https://pypi.org/project/python-dotenv)
+
 > flask-marshmallow [doc](https://flask-marshmallow.readthedocs.io/en/latest)
 > SQLAlchemy [doc](https://www.sqlalchemy.org)
 > create requirements file
