@@ -26,7 +26,7 @@ class Usuario(db.Model):
 Roll.usuarios = db.relationship('Usuario', back_populates='roll')
 
 with app.app_context():
-  # db.drop_all()
+  # db.drop_all() #--- Solo si nececitas limpiar la base de datos ---
   db.create_all()
 
   roll_admin = Roll(nombre='Administrador')
