@@ -12,16 +12,18 @@ virtualenv -p python3 venv
 ```
 > :warning: if failure open PowerShell as Admin and type 'Set-ExecutionPolicy Unrestricted'
 
-### Dependency 
+### Dependency
 * python-dotenv [doc](https://pypi.org/project/python-dotenv)
 * flask-marshmallow [doc](https://flask-marshmallow.readthedocs.io/en/latest)
-* SQLAlchemy [doc](https://www.sqlalchemy.org)
 * create requirements file
 ```
-pip install python-dotenv
 pip install flask-marshmallow
-pip install SQLAlchemy
-pip freeze > requirements.txt 
+pip install flask-sqlalchemy 
+pip install marshmallow-sqlalchemy
+pip install python-dotenv
+pip install mysqlclient
+
+pip freeze > requirements.txt
 ```
 
 ### Create .env file
@@ -42,4 +44,9 @@ python src/app.py
 ```
 pip list
 pip install -r requirements.txt
+```
+
+### Connection
+```
+BD_CONN_MYSQL=mysql//user:pass@host:port/db
 ```
