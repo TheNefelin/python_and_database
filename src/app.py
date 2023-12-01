@@ -26,6 +26,7 @@ class Usuario(db.Model):
 Roll.usuarios = db.relationship('Usuario', back_populates='roll')
 
 with app.app_context():
+  # db.drop_all()
   db.create_all()
 
   roll_admin = Roll(nombre='Administrador')
@@ -41,6 +42,7 @@ with app.app_context():
   db.session.add_all([
     Usuario(nombre='Superman', roll=roll_admin),
     Usuario(nombre='Batman', roll=roll_user),
+    Usuario(nombre='Wonder Woman', roll=roll_user),
   ])
 
   db.session.commit()
