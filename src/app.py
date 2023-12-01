@@ -39,8 +39,8 @@ with app.app_context():
   db.session.commit()
 
   db.session.add_all([
-    Usuario(nombre='Francisco', roll=roll_admin),
-    Usuario(nombre='Elizabeth', roll=roll_user),
+    Usuario(nombre='Superman', roll=roll_admin),
+    Usuario(nombre='Batman', roll=roll_user),
   ])
 
   db.session.commit()
